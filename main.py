@@ -28,7 +28,7 @@ class MyWidget(QMainWindow, Ui_MainWindow):
 
     def run(self, qp):
         try:
-            qp.setPen(QPen(QColor('yellow'), 8))
+            qp.setPen(QPen(QColor(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)), 8))
             a = random.randint(40, 400)
             qp.drawEllipse(20, 20, a, a)
         except Exception as err:
